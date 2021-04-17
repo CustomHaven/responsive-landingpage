@@ -13,7 +13,7 @@ We have used CSS Grid combain with flexbox for this project to design a company 
 
 ## Launch
 
-[The page link](https://customhaven.github.io/company-homepage/)
+[The page link](customhaven.github.io/responsive-landingpage/)
 
 ## Status
 
