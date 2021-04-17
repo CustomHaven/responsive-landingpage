@@ -1,0 +1,232 @@
+/* Universal codes */
+
+body {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  width: auto;
+  height: 2500px;
+  background-color: salmon;
+  grid-template: repeat(20, 1fr) / repeat(15, 1fr);
+  /* grid-template-columns: repeat(15, 1fr); */
+  /* grid-template-rows: repeat(10, 1fr); */
+}
+
+/* Header Section */
+
+header {
+  background-color: skyblue;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+nav {
+  padding-top: 5px;
+  padding-right: 40px;
+  padding-bottom: 0;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  display: inline-block;
+}
+
+li a {
+  text-decoration-line: none;
+  color: black;
+  font-size: 1.25rem;
+}
+
+li a:hover {
+  color: crimson;
+  text-decoration-line: underline;
+  font-size: 1.5rem;
+}
+
+/* Banner */
+.banner {
+  background-image: url("https://codecademy-content.s3.amazonaws.com/PRO/independent-practice-projects/responsive-club-site/img/runner-splash.jpg");
+  background-position: center;
+  background-repeat: none;
+  grid-area: 2 / 1 / 5 / -1;
+  margin-top: -70px;
+  /* grid-column-start: 1; */
+  /* grid-column-end: -1; */
+  /* grid-row-start: 2; */
+  /* grid-row-end: 5; */
+  text-align: center;
+  padding: 150px;
+}
+
+.banner h1 {
+  /* background-color: mintcream; */
+  opacity: 0.75;
+}
+
+/* Event Section */
+#event {
+  background-color: tan;
+  /* grid-column-start: 1; */
+  /* grid-column-end: -1; */
+  /* grid-row-start: 5; */
+  /* grid-row-end: 9; */
+
+  grid-area: 5 / 1 / 9 / -1;
+}
+
+#event h3,
+#event p {
+  padding-left: 40px;
+}
+
+.flex-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.image-container,
+.image-container1 {
+  width: 30%;
+  height: 300px;
+  overflow: hidden;
+}
+
+/* Testimonial Section */
+
+.testimonial {
+  background-color: cornflowerblue;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 9;
+  grid-row-end: span 1;
+}
+
+.testimonial h1 {
+  font-style: italic;
+}
+
+.testimonial h5 {
+  font-size: 1.25rem;
+}
+
+.testimonial h1:hover {
+  font-size: 700;
+}
+
+/* image-container1 */
+.winners {
+  background-color: darkkhaki;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 10; /*12;*/
+  grid-row-end: 13; /*15;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.winners .image-container {
+  margin-top: 30px;
+}
+
+/* Marathon Section */
+
+#marathon {
+  margin: 0 auto;
+  margin-bottom: -50px;
+  background-color: mediumseagreen;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 13;
+  grid-row-end: 20;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  align-content: center;
+  justify-content: center;
+}
+
+#marathon .join {
+  text-align: center;
+  /* grid-column-start: 8; */
+  /* grid-column-end: 10; */
+  /* grid-row-start: 13; */
+  /* grid-row-end: 14; */
+}
+
+#marathon .large-img {
+  margin: 0 auto;
+  /* grid-row-start: 16;
+  grid-row-end: 19;
+  grid-column-start: 7;
+  grid-column-end: 12;
+  margin-top: -100px;
+  margin-bottom: auto; */
+}
+
+#marathon .meetup {
+  /* padding: 5%; */
+  margin: 0 30%;
+  padding: 50px;
+  /* grid-column-start: 7; */
+  /* grid-column-end: -1; */
+  /* grid-row-start: 18; */
+  /* grid-row-end: 19; */
+}
+
+.image-container img,
+.large-img img {
+  /* object-fit: cover; */
+  width: 100%;
+  height: 100%;
+  /* height: auto; */
+  display: block;
+}
+
+.large-img {
+  /* margin: 10% auto; */
+  height: 650px;
+  max-width: 40%;
+}
+
+/* Footer Section */
+
+footer {
+  /* margin-top: 150px; */
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: -1;
+  margin-top: -100px;
+  padding: 0 50px;
+  background-color: olive;
+}
+
+@media only screen and (max-width: 900px) {
+  #marathon .large-img {
+    max-width: 60%;
+  }
+  #marathon .meetup {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .image-container img {
+    flex-direction: column;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #marathon .large-img {
+    max-width: 80%;
+  }
+}
